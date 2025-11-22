@@ -33,12 +33,22 @@ Consider the names of the tower pegs as A, B, C. Get the number of disks value f
 
 ```
 
+def TowerOfHanoi(n , source, destination, auxiliary):
+	
+	if(n>0):
+	    TowerOfHanoi(n-1, source, auxiliary, destination)
+	    print ("Move disk from",source,"to",destination)
+	    TowerOfHanoi(n-1, auxiliary, destination, source)
 
+n=int(input())		
+print("No. of disks =",n)
 ```
 
 ### OUTPUT
 
-
+<img width="842" height="821" alt="image" src="https://github.com/user-attachments/assets/6a82d4eb-4d12-4859-9a54-93f4b1440d9e" />
 
 ### RESULT
 
+Tower of Hanoi program started and recursive logic verified successfully.
+All disk movements between pegs A, B, and C displayed correctly.
